@@ -1,0 +1,256 @@
+.Authorisation-page-container {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Authorisation-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    line-height: 0.2;
+    width: 40%;
+    height: 10%;
+    margin-bottom: 20px;
+}
+
+.Authorisation-title h2 {
+    font-weight: 300;
+}
+
+.Authorisation-title h2:first-child {
+    font-size: 60px;
+    color: var(--main-color);
+}
+
+.Authorisation-title h2:last-child {
+    font-size: 55px;
+}
+
+.Authorisation-logo {
+    width: 40%;
+}
+
+.Auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Auth-form h1 {
+    margin-bottom: 50px;
+}
+
+.Auth-form button {
+    background-color: Transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #00650e;
+    cursor: pointer;
+}
+
+.Auth-form button:hover {
+    color: blue;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.auth-input {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.auth-input:focus {
+    outline: none;
+}
+
+label {
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 15px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.auth-input:focus ~ label, .auth-input:valid ~ label {
+    top: -15px;
+    font-size: 14px;
+    color: #00650e;
+}
+
+.Auth-buttons-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 500px;
+}
+.bar:before, .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #00650e;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+.btn {
+    margin: 10px auto;
+    position: relative;
+    font-size: 18px;
+    color: white;
+    background-color: #00650e;
+    width: 300px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+.btn.right:after {
+    right: 0;
+}
+.btn.wave:after {
+    content: "";
+    background: #fff;
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -5%;
+    border-radius: 50px;
+    margin-left: -30%;
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
+}
+.btn.wave.right:after {
+    content: "";
+    background: #fff;
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -5%;
+    border-radius: 50px;
+    margin-right: -30%;
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
+}
+.btn.wave:active:after {
+    width: 0;
+    opacity: 1;
+    transition: 0s;
+}
+.bar:before {
+    left: 50%;
+}
+.bar:after {
+    right: 50%;
+}
+.btn.wave.right.blue {
+    background-color: #00024a;
+    transition: all 0.2s ease-in-out;
+}
+.btn.wave.right{
+    background-color: var(--main-color);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.btn.wave.right:hover {
+    background-color: white;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.btn.wave.right.blue:hover {
+    background-color: white;
+    color: #00024a;
+    border: 1px solid #00024a;
+}
+
+/* active state */
+.auth-input:focus ~ .bar:before {
+    width: 34%;
+}
+
+.auth-input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.Autho-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.Autho-logo-green {
+    position: absolute;
+    left: 480px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid var(--main-color);
+    z-index: 999;
+    background-color: white;
+}
+
+.Autho-logo-black {
+    position: absolute;
+    left: 500px;
+    top: 220px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+}
+
+.ceiling-plan-link {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.ceiling-plan-link:after {
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    content: "";
+    transition: width 0.3s ease-out;
+}
+
+.ceiling-plan-link:hover:after,
+.ceiling-plan-link:focus:after {
+    width: 100%;
+}
+
+.group label span{
+    color: red;
+}
+
+@media screen and (max-width: 500px){
+    .Authorisation-logo {width: 120px}
+    .group .auth-input{width: 90%}
+    .bar {}
+}
